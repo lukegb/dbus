@@ -10,7 +10,7 @@ import (
 )
 
 func lookupHomeDir() string {
-	myUid := os.Getuid()
+	myUid := os.Geteuid()
 
 	f, err := os.Open("/etc/passwd")
 	if err != nil {
